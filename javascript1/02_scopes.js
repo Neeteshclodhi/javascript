@@ -94,3 +94,31 @@
 // secretKeeper.setSecret('new secret');
 // secretKeeper.getSecret(); // Secret: new secret
 
+
+//closure 
+// function sum(a, b) {
+//           console.log(a + b);
+
+//           return function(a,b){
+//                     console.log(a * b);
+//           }
+// }
+// let mult = sum(2, 3);
+// mult();
+
+
+function one(a, b, c) {
+          console.log(a + b + c);
+          return {
+                    getSumTwo: function() {
+                              return a + b;   
+                    },
+                    getThreeSum: function () {
+                              return a + b + c;
+                    }
+          }
+
+}
+let val = one(1, 2, 3);
+console.log(val.getSumTwo());
+console.log(val.getThreeSum());
